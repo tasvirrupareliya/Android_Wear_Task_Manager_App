@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <uses-feature android:name="android.hardware.type.watch" />
+
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/Base.Theme.WearOs"
+        android:usesCleartextTraffic="true">
+        <activity
+            android:name=".activity.UpcomingTasksActivity"
+            android:exported="false"
+            android:theme="@style/Base.Theme.WearOs" />
+        <activity
+            android:name=".activity.NotificationdetailsActivity"
+            android:exported="false"
+            android:theme="@style/Base.Theme.WearOs" />
+        <activity
+            android:name=".activity.ListTaskActivity"
+            android:exported="false"
+            android:theme="@style/Base.Theme.WearOs" />
+        <activity
+            android:name=".activity.AddTaskActivity"
+            android:exported="true"
+            android:theme="@style/Base.Theme.WearOs">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <receiver
+            android:name=".activity.WearActionReceiver"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="WEAR_ACTION" />
+                <action android:name="CHECK_NOTIFICATIONS" />
+            </intent-filter>
+        </receiver>
+    </application>
+
+</manifest>

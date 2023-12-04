@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.wear.widget.BoxInsetLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="2dp"
+    tools:context=".activity.AddTaskActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:padding="2dp"
+        app:layout_boxedEdges="all">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <EditText
+                android:id="@+id/editTextTaskName"
+                android:layout_width="100dp"
+                android:layout_height="30dp"
+                android:hint="@string/task_name"
+                android:textSize="@dimen/edittext_size"
+                tools:ignore="Autofill,TextFields,VisualLintWearMargin,TouchTargetSizeCheck" />
+
+            <ImageView
+                android:id="@+id/microphoneIcon"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_toEndOf="@+id/editTextTaskName"
+                android:padding="5dp"
+                android:src="@drawable/baseline_keyboard_voice_24"
+                tools:ignore="ContentDescription" />
+
+        </RelativeLayout>
+
+        <Button
+            android:id="@+id/buttonDueDate"
+            android:layout_width="120dp"
+            android:layout_height="30dp"
+            android:text="@string/select_due_date"
+            android:textSize="@dimen/textsize"
+            tools:ignore="TouchTargetSizeCheck" />
+
+        <Button
+            android:id="@+id/buttonAddTask"
+            android:layout_width="120dp"
+            android:layout_height="30dp"
+            android:text="@string/add_task"
+            android:textSize="@dimen/textsize"
+            tools:ignore="TouchTargetSizeCheck" />
+
+        <Button
+            android:id="@+id/buttonViewTaskList"
+            android:layout_width="120dp"
+            android:layout_height="30dp"
+            android:text="@string/view_task_list"
+            android:textSize="@dimen/textsize"
+            tools:ignore="TouchTargetSizeCheck" />
+
+    </LinearLayout>
+</androidx.wear.widget.BoxInsetLayout>
